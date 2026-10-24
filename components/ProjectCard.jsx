@@ -1,10 +1,11 @@
+import MotionCard from "./MotionCard";
 import Link from "next/link";
 import { projectPath } from "../lib/projects.mjs";
 
 export default function ProjectCard({ project, niche }) {
   const domain = new URL(project.url).hostname;
   return (
-    <article
+    <MotionCard
       className="portfolio-project niche-project"
       data-niche={project.niche}
       data-platform={project.platform}
@@ -44,6 +45,7 @@ export default function ProjectCard({ project, niche }) {
             </div>
           )}
           <span className="niche-cover-caption">PROJECT SHOWCASE</span>
+          <span className="card-explore-pill">View project <span aria-hidden="true">↗</span></span>
         </div>
       </Link>
       <div className="project-caption">
@@ -70,6 +72,6 @@ export default function ProjectCard({ project, niche }) {
           ↗
         </a>
       </div>
-    </article>
+    </MotionCard>
   );
 }

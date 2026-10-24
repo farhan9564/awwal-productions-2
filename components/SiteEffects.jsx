@@ -29,6 +29,37 @@ export default function SiteEffects() {
       reveals.forEach((el) => observer.observe(el));
     }
     const cleanups = [];
+    const stages = [...document.querySelectorAll(".floating-work-stage")];
+    const activeStages = new Set();
+    let scrollFrame;
+    const updateStages = () => {
+      scrollFrame = undefined;
+      activeStages.forEach(stage => {
+        const rect = stage.getBoundingClientRect();
+        const progress = Math.max(-1, Math.min(1, (innerHeight / 2 - rect.top - rect.height / 2) / innerHeight));
+        stage.style.setProperty("--stage-drift", `${progress * 40}px`);
+      });
+    };
+    const onStageScroll = () => {
+      if (activeStages.size && !scrollFrame) scrollFrame = requestAnimationFrame(updateStages);
+    };
+    let stageObserver;
+    if (!reduced && window.matchMedia("(min-width: 851px)").matches && "IntersectionObserver" in window) {
+      stageObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => entry.isIntersecting ? activeStages.add(entry.target) : activeStages.delete(entry.target));
+        onStageScroll();
+      });
+      stages.forEach(stage => stageObserver.observe(stage));
+      window.addEventListener("scroll", onStageScroll, { passive: true });
+      window.addEventListener("resize", onStageScroll, { passive: true });
+    }
+    cleanups.push(() => {
+      stageObserver?.disconnect();
+      cancelAnimationFrame(scrollFrame);
+      window.removeEventListener("scroll", onStageScroll);
+      window.removeEventListener("resize", onStageScroll);
+    });
+
     const filters = [...document.querySelectorAll(".filter[data-filter]")];
     const cards = [
       ...document.querySelectorAll(".portfolio-project[data-category]"),

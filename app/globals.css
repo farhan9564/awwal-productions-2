@@ -4442,3 +4442,74 @@ p {
 @media (max-width: 850px) {
   .main-nav.open { max-height: calc(100dvh - 88px); overflow-y: auto; overscroll-behavior: contain; }
 }
+
+/* Floating browser gallery, inspired by the reference's layered selected work. */
+.floating-work { overflow: hidden; background: #e9ece5; color: #161b19; }
+.floating-work .section-head { position: relative; z-index: 2; }
+.floating-work-stage { position: relative; height: clamp(640px, 63vw, 830px); perspective: 1400px; isolation: isolate; }
+.work-stage-word { position: absolute; top: 18%; left: 1%; font: 700 clamp(80px, 14vw, 185px)/.82 var(--display); letter-spacing: -.08em; color: #d7dcd3; z-index: -1; pointer-events: none; }
+.work-stage-orbit { position: absolute; left: 12%; right: 12%; top: 3%; bottom: 5%; border: 1px solid #1a302b18; border-radius: 50%; transform: rotate(-18deg); pointer-events: none; }
+.floating-work-slot { position: absolute; width: 57%; transition: transform .8s var(--ease); }
+.floating-work-slot.slot-1 { top: 4%; left: 1%; z-index: 2; transform: translateY(var(--stage-drift, 0px)) rotate(-5deg); }
+.floating-work-slot.slot-2 { top: 32%; right: 1%; z-index: 3; transform: translateY(calc(var(--stage-drift, 0px) * -1)) rotate(5deg); }
+.floating-work-slot:hover, .floating-work-slot:focus-within { z-index: 5; }
+.featured-browser-card { border: 1px solid #ffffffa8; border-radius: 18px; padding: 7px; background: #fcfdf9e8; color: #17211d; box-shadow: 0 24px 50px -20px #1a302b66, 0 2px 4px #1a302b14; }
+.featured-browser-link { display: block; border-radius: 12px; overflow: hidden; background: #e3e9e7; }
+.featured-browser-chrome { height: 32px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 13px; background: #f4f6f1; color: #69756d; font: 500 9px var(--body); }
+.featured-browser-dots { color: #a6b1a7; letter-spacing: 2px; font-size: 7px; }
+.featured-browser-viewport { position: relative; overflow: hidden; aspect-ratio: 1.62; }
+.featured-browser-viewport img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .8s var(--ease), filter .5s; }
+.featured-browser-caption { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 16px 13px 10px; }
+.featured-browser-caption > div > span { font: 600 8px var(--body); letter-spacing: .12em; color: #657367; }
+.featured-browser-caption h3 { font: 600 clamp(18px, 2vw, 26px)/1.2 var(--display); letter-spacing: -.04em; margin: 7px 0 0; }
+.featured-browser-caption .project-arrow { flex-shrink: 0; width: 38px; height: 38px; background: #19251d; color: #caff2b; border: none; }
+.featured-open-project, .card-explore-pill { position: absolute; z-index: 3; left: 50%; top: 50%; transform: translate(-50%, calc(-50% + 10px)); opacity: 0; display: inline-flex; align-items: center; justify-content: center; gap: 22px; white-space: nowrap; padding: 13px 18px; border: 1px solid #ffffff50; border-radius: 999px; background: #0c1715ed; color: #fff; box-shadow: 0 12px 30px #0003; font-size: 12px; transition: opacity .3s, transform .4s var(--ease); pointer-events: none; }
+.work-stage-note { position: absolute; left: 5%; bottom: 8%; display: flex; align-items: center; gap: 17px; font: 500 12px/1.6 var(--body); color: #637264; }
+.work-stage-note > span:first-child { color: #2d4833; font-size: 48px; }
+.motion-card { --tilt-x: 0deg; --tilt-y: 0deg; transform: perspective(1200px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)); transition: transform .45s var(--ease), box-shadow .4s, border-color .4s; }
+.motion-card.is-pointed { transition: transform .14s ease-out, box-shadow .4s, border-color .4s; }
+.motion-card .portfolio-art-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; background: radial-gradient(400px circle at var(--pointer-x,50%) var(--pointer-y,50%), #ffffff20, transparent 65%); transition: opacity .3s; }
+.motion-card.is-pointed .portfolio-art-link::after { opacity: 1; }
+.motion-card.report-card { position: relative; overflow: hidden; }
+.motion-card.report-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(500px circle at var(--pointer-x,50%) var(--pointer-y,50%), #caff2b0d, transparent 65%); pointer-events: none; opacity: 0; transition: opacity .3s; }
+.motion-card.report-card.is-pointed::before { opacity: 1; }
+.motion-card.report-card:hover { transform: perspective(1200px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(-4px); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .featured-browser-link:hover img { transform: scale(1.035); filter: brightness(.85); }
+  .featured-browser-link:hover .featured-open-project, .portfolio-art-link:hover .card-explore-pill { opacity: 1; transform: translate(-50%, -50%); }
+  .featured-browser-card:hover { box-shadow: 0 32px 65px -20px #1a302b70; }
+}
+.featured-browser-link:focus-visible .featured-open-project, .portfolio-art-link:focus-visible .card-explore-pill { opacity: 1; transform: translate(-50%, -50%); }
+/* Cancel the previous generic entry animation so pointer tilt owns the card transform. */
+.motion-card.portfolio-project, .motion-card.meta-case-card { animation: none; }
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .floating-work-slot { animation: work-arrive linear both; animation-timeline: view(); animation-range: entry 0% entry 45%; }
+    @keyframes work-arrive { from { opacity: .25; translate: 0 70px; } to { opacity: 1; translate: 0 0; } }
+  }
+}
+@media (max-width: 850px) {
+  .floating-work-stage { height: auto; display: grid; gap: 28px; padding: 10px 0 32px; }
+  .floating-work-slot, .floating-work-slot.slot-1, .floating-work-slot.slot-2 { position: relative; inset: auto; width: 100%; transform: none; animation: none; }
+  .work-stage-word, .work-stage-orbit, .work-stage-note { display: none; }
+  .featured-browser-caption { padding: 16px 10px 11px; }
+  .featured-browser-caption h3 { font-size: 24px; }
+  .featured-browser-viewport { aspect-ratio: 1.5; }
+  .featured-browser-viewport img { object-fit: cover; }
+  .featured-open-project { display: none; }
+  .card-explore-pill { top: auto; bottom: 17px; left: auto; right: 15px; transform: none; opacity: 1; padding: 9px 13px; font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floating-work-slot.slot-1 { transform: rotate(-3deg); }
+  .floating-work-slot.slot-2 { transform: rotate(3deg); }
+  .motion-card, .motion-card.report-card:hover { transform: none; }
+}
+@media (max-width: 850px) and (prefers-reduced-motion: reduce) {
+  .floating-work-slot.slot-1, .floating-work-slot.slot-2 { transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .motion-card.portfolio-project, .motion-card.meta-case-card { animation: card-arrive linear both; animation-timeline: view(); animation-range: entry 0% entry 20%; }
+    @keyframes card-arrive { from { opacity: .3; translate: 0 28px; } to { opacity: 1; translate: 0 0; } }
+  }
+}

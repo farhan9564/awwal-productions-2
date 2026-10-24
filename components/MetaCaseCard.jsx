@@ -1,9 +1,10 @@
+import MotionCard from "./MotionCard";
 import Link from "next/link";
 import { metaCasePath } from "../lib/meta-cases.mjs";
 
 export default function MetaCaseCard({ study, index = 0 }) {
   return (
-    <article
+    <MotionCard
       className={`report-card meta-case-card${study.group === "ecommerce" ? " report-mbm" : " report-digikon"}`}
     >
       <div className="report-card-top">
@@ -42,6 +43,6 @@ export default function MetaCaseCard({ study, index = 0 }) {
       >
         Read strategy & results <span aria-hidden="true">↗</span>
       </Link>
-    </article>
+    </MotionCard>
   );
 }
