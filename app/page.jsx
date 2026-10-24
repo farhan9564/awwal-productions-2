@@ -1,4 +1,4 @@
-import MotionCard from "../components/MotionCard";
+import ServiceStudioCards from "../components/ServiceStudioCards";
 import WorkExplorer from "../components/WorkExplorer";
 import FeaturedWebProjects from "../components/FeaturedWebProjects";
 import ShopifyProjectsSection from "../components/ShopifyProjectsSection";
@@ -188,106 +188,7 @@ export default function Page() {
                 }
               </p>
             </div>
-            <div className="service-grid">
-              <MotionCard className="service-motion-card"><Link
-                className="service-tile reveal"
-                href="/services/web-development"
-                prefetch={false}
-              >
-                <div className="tile-head">
-                  <span className="tile-no">{"/01"}</span>
-                  <div className="tile-graphic">
-                    <svg viewBox="0 0 36 36">
-                      <path d="M10 9 3 18l7 9M26 9l7 9-7 9M21 5l-6 26"></path>
-                    </svg>
-                  </div>
-                </div>
-                <h3>{"Web Development"}</h3>
-                <p>
-                  {
-                    "Custom B2B websites, corporate pages and enquiry-focused experiences that turn complex offers into clear next steps."
-                  }
-                </p>
-                <div className="tile-footer">
-                  <span>{"EXPLORE SERVICE"}</span>
-                  <span aria-hidden="true">{"↗"}</span>
-                </div>
-              </Link></MotionCard>
-              <MotionCard className="service-motion-card"><Link
-                className="service-tile reveal"
-                href="/services/digital-marketing"
-                prefetch={false}
-              >
-                <div className="tile-head">
-                  <span className="tile-no">{"/02"}</span>
-                  <div className="tile-graphic">
-                    <svg viewBox="0 0 36 36">
-                      <path d="M6 15v7a3 3 0 0 0 3 3h4l4 7h4l-3-9m-9-8c8 0 13-4 20-8v22c-7-4-12-8-20-8M28 7v22"></path>
-                    </svg>
-                  </div>
-                </div>
-                <h3>{"Digital Marketing"}</h3>
-                <p>
-                  {
-                    "Meta and Google Ads strategy, creative testing and performance reporting shaped around your business goals."
-                  }
-                </p>
-                <div className="tile-footer">
-                  <span>{"EXPLORE SERVICE"}</span>
-                  <span aria-hidden="true">{"↗"}</span>
-                </div>
-              </Link></MotionCard>
-              <MotionCard className="service-motion-card"><Link
-                className="service-tile reveal"
-                href="/services/social-media-management"
-                prefetch={false}
-              >
-                <div className="tile-head">
-                  <span className="tile-no">{"/03"}</span>
-                  <div className="tile-graphic">
-                    <svg viewBox="0 0 36 36">
-                      <rect height="24" rx="7" width="24" x="6" y="6"></rect>
-                      <circle cx="18" cy="18" r="6"></circle>
-                      <path d="M25.5 11h.01"></path>
-                    </svg>
-                  </div>
-                </div>
-                <h3>{"Social Media Management"}</h3>
-                <p>
-                  {
-                    "Instagram and Facebook content calendars, reels, carousels and brand communication that stays consistent."
-                  }
-                </p>
-                <div className="tile-footer">
-                  <span>{"EXPLORE SERVICE"}</span>
-                  <span aria-hidden="true">{"↗"}</span>
-                </div>
-              </Link></MotionCard>
-              <MotionCard className="service-motion-card"><Link
-                className="service-tile reveal"
-                href="/services/shopify-development"
-                prefetch={false}
-              >
-                <div className="tile-head">
-                  <span className="tile-no">{"/04"}</span>
-                  <div className="tile-graphic">
-                    <svg viewBox="0 0 36 36">
-                      <path d="M8 13h20l-2 18H10L8 13Zm5 2v-5a5 5 0 0 1 10 0v5"></path>
-                    </svg>
-                  </div>
-                </div>
-                <h3>{"Shopify Store Development"}</h3>
-                <p>
-                  {
-                    "Shopify stores with clear collections, useful product pages and thoughtful mobile shopping journeys."
-                  }
-                </p>
-                <div className="tile-footer">
-                  <span>{"EXPLORE SERVICE"}</span>
-                  <span aria-hidden="true">{"↗"}</span>
-                </div>
-              </Link></MotionCard>
-            </div>
+            <ServiceStudioCards />
           </div>
         </section>
         {"\n"}

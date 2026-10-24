@@ -1,0 +1,9 @@
+import Link from 'next/link';
+import MotionCard from './MotionCard';
+const services = [
+ ['Web Development','web-development','BUILD.','WITH PURPOSE.','Custom websites that turn your business into a clear, compelling digital experience.','Design × Development'],
+ ['Digital Marketing','digital-marketing','GROW.','WITH CLARITY.','Meta and Google Ads strategy, creative testing and reporting shaped around your goals.','Creative × Performance'],
+ ['Social Media Management','social-media-management','CONNECT.','WITH IMPACT.','Consistent content, reels and brand storytelling that give your business a distinctive voice.','Content × Community'],
+ ['Shopify Store Development','shopify-development','SELL.','WITH CONFIDENCE.','Thoughtful Shopify stores with clear collections, useful product pages and smooth shopping journeys.','Products × Experience']
+];
+export default function ServiceStudioCards(){return <div className="service-studio-grid">{services.map(([name,slug,verb,line,description,focus],index)=><div className="service-studio-scene" key={slug}><div className="service-studio-orbit" aria-hidden="true"/><span className="service-studio-badge"><small>AWWAL EXPERTISE / 0{index+1}</small><b>{name}</b></span><MotionCard className="service-studio-card"><Link href={`/services/${slug}`} className="service-studio-link" aria-label={`Explore ${name}`}><div className="service-studio-top"><span aria-hidden="true">● ● ●</span><span>AWWAL / DIGITAL STUDIO</span></div><div className="service-studio-body"><span className="service-studio-label">{name} / 0{index+1}</span><h3>{verb}<em>{line}</em></h3><p>{description}</p></div><div className="service-studio-bottom"><span>STRATEGY / DESIGN / DELIVERY</span><b>EXPLORE SERVICE ↗</b></div></Link></MotionCard><span className="service-studio-mindset"><small>OUR APPROACH</small><b>{focus}</b></span><span className="service-studio-spark" aria-hidden="true">✳</span></div>)}</div>}
