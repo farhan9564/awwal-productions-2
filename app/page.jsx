@@ -1,3 +1,4 @@
+import WorkExplorer from "../components/WorkExplorer";
 import FeaturedWebProjects from "../components/FeaturedWebProjects";
 import ShopifyProjectsSection from "../components/ShopifyProjectsSection";
 import SocialPortfolioTeaser from "../components/SocialPortfolioTeaser";
@@ -126,31 +127,7 @@ export default function Page() {
           </div>
         </section>
         {"\n"}
-        <div aria-label="Our four services" className="marquee">
-          <div className="marquee-track">
-            <div className="marquee-group">
-              <span>{"Web Development"}</span>
-              <b>{"✳"}</b>
-              <span>{"Digital Marketing"}</span>
-              <b>{"✳"}</b>
-              <span>{"Social Media Management"}</span>
-              <b>{"✳"}</b>
-              <span>{"Shopify Development"}</span>
-              <b>{"✳"}</b>
-            </div>
-            <div aria-hidden="true" className="marquee-group">
-              <span>{"Web Development"}</span>
-              <b>{"✳"}</b>
-              <span>{"Digital Marketing"}</span>
-              <b>{"✳"}</b>
-              <span>{"Social Media Management"}</span>
-              <b>{"✳"}</b>
-              <span>{"Shopify Development"}</span>
-              <b>{"✳"}</b>
-            </div>
-          </div>
-        </div>
-        {"\n"}
+        <WorkExplorer />
         <section className="padded-section">
           <div className="container">
             <div className="intro-layout">

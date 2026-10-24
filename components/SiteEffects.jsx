@@ -10,7 +10,9 @@ export default function SiteEffects() {
       "(prefers-reduced-motion: reduce)",
     ).matches;
     let observer;
+    // Opt into reveals only after JS is ready; content stays readable if JS fails.
     const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach(el => el.classList.add("reveal-ready"));
     if (reduced || !("IntersectionObserver" in window))
       reveals.forEach((el) => el.classList.add("visible"));
     else {
@@ -94,6 +96,9 @@ export default function SiteEffects() {
           stages[++index % stages.length];
         const em = document.createElement("em");
         em.textContent = emphasis;
+        big.classList.remove("changing");
+        void big.offsetWidth;
+        big.classList.add("changing");
         big.replaceChildren(
           document.createTextNode(headline),
           document.createElement("br"),

@@ -46,7 +46,22 @@ export default function Header() {
   }, [pathname]);
   useEffect(() => {
     document.body.classList.toggle("lock-scroll", open);
-    return () => document.body.classList.remove("lock-scroll");
+    if (!open) return () => document.body.classList.remove("lock-scroll");
+    const toggle = document.getElementById("mobileToggle");
+    const focusable = [...document.querySelectorAll("#mainNav a"), toggle].filter(Boolean);
+    focusable[0]?.focus();
+    const trapFocus = event => {
+      if (event.key === "Escape") toggle?.focus();
+      if (event.key !== "Tab") return;
+      const first = focusable[0], last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    };
+    document.addEventListener("keydown", trapFocus);
+    return () => {
+      document.body.classList.remove("lock-scroll");
+      document.removeEventListener("keydown", trapFocus);
+    };
   }, [open]);
   return (
     <header
