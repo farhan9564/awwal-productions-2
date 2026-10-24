@@ -38,6 +38,9 @@ export default function Footer() {
               <Link href="/portfolio" prefetch={false}>
                 {"Our work"}
               </Link>
+              <Link href="/portfolio/shopify" prefetch={false}>
+                Shopify portfolio
+              </Link>
               <Link href="/portfolio/meta-ads" prefetch={false}>
                 {"Meta Ads portfolio"}
               </Link>

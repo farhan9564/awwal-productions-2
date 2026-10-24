@@ -1,3 +1,4 @@
+import { shopifyPortfolioPath } from "../lib/projects.mjs";
 import { socialPortfolioPath } from "../lib/social-projects.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -25,7 +26,9 @@ test("every old page permanently redirects to one existing React page", async ()
     assert.ok(!/href="[^"#]*\.html/.test(source), page.path);
     for (const [, href] of source.matchAll(/href="(\/[^"#]*)/g))
       assert.ok(
-        pages.some((p) => p.path === href) || href === socialPortfolioPath,
+        pages.some((p) => p.path === href) ||
+          href === socialPortfolioPath ||
+          href === shopifyPortfolioPath,
         `Missing ${href}`,
       );
   }

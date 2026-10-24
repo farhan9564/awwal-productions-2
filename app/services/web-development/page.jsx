@@ -1,3 +1,4 @@
+import FeaturedWebProjects from "../../../components/FeaturedWebProjects";
 import Link from "next/link";
 
 export const metadata = {
@@ -274,6 +275,7 @@ export default function Page() {
             <span aria-hidden="true">{"↗"}</span>
           </Link>
         </div>
+        <FeaturedWebProjects />
         <section className="cta-band">
           <div className="container">
             <div className="cta-inner reveal">

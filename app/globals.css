@@ -4344,3 +4344,10 @@ p {
     transform: none;
   }
 }
+
+.shopify-section-accent {
+  color: #526d1a;
+}
+.shopify-project-section {
+  border-top: 1px solid #aab1a1;
+}

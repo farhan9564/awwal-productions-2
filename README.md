@@ -1,6 +1,6 @@
 # Awwal Productions — React + Node.js
 
-The agency website now runs on Next.js App Router, React 19 and Node.js. Its existing design, supplied transparent logo, 50 pages, portfolio covers and campaign content are preserved as React components. Shared components handle the header, footer, mobile menu, animations and enquiry form.
+The agency website now runs on Next.js App Router, React 19 and Node.js. Its existing design, supplied transparent logo, 51 pages, portfolio covers and campaign content are preserved as React components. Shared components handle the header, footer, mobile menu, animations and enquiry form.
 
 ## Development
 
@@ -66,3 +66,7 @@ Dashboard metrics, calculations and reported business outcomes are labelled sepa
 ## Social media portfolio
 
 `/portfolio/social-media` lists the five Instagram profiles supplied by the user. `lib/social-projects.mjs` is the shared source for the portfolio, service-page projects and homepage teaser. Profile names and broad business niches were checked against available public descriptions; no follower counts, engagement statistics or unprovided campaign results are published.
+
+## Separate Shopify portfolio
+
+`/portfolio/shopify` lists exactly Fast Apparel, IBH Apparel, JSONS Sports and Iqra Studio, as identified by the user. These four stores are excluded from the web-development gallery, which now displays 21 featured projects across eight niches. Existing store detail URLs and legacy redirects remain valid; their pages identify them as Shopify Store Development projects. The homepage and Shopify service page use the same four-store data, and the shared portfolio navigation has a separate Shopify category.

@@ -1,3 +1,4 @@
+import ShopifyProjectsSection from "../../../components/ShopifyProjectsSection";
 import Link from "next/link";
 
 export const metadata = {
@@ -276,6 +277,7 @@ export default function Page() {
             <span aria-hidden="true">{"↗"}</span>
           </Link>
         </div>
+        <ShopifyProjectsSection />
         <section className="cta-band">
           <div className="container">
             <div className="cta-inner reveal">

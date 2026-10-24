@@ -7,6 +7,7 @@ export default function ProjectCard({ project, niche }) {
     <article
       className="portfolio-project niche-project"
       data-niche={project.niche}
+      data-platform={project.platform}
     >
       <Link
         className="portfolio-art-link"
@@ -47,7 +48,11 @@ export default function ProjectCard({ project, niche }) {
       </Link>
       <div className="project-caption">
         <div className="project-caption-left">
-          <div className="project-type">{niche.label}</div>
+          <div className="project-type">
+            {project.platform === "Shopify"
+              ? "Shopify Store Development"
+              : niche.label}
+          </div>
           <h3>
             <Link href={projectPath(project)} prefetch={false}>
               {project.name}

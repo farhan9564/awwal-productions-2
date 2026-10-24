@@ -1,6 +1,7 @@
 import Link from "next/link";
 const sections = [
   ["/portfolio", "Web Development"],
+  ["/portfolio/shopify", "Shopify Stores"],
   ["/portfolio/meta-ads", "Meta Ads"],
   ["/portfolio/social-media", "Social Media"],
 ];

@@ -1,16 +1,20 @@
 import PortfolioNav from "../../components/PortfolioNav";
 import Link from "next/link";
 import ProjectGallery from "../../components/ProjectGallery";
-import { projects, projectPath, niches } from "../../lib/projects.mjs";
+import {
+  webProjects as projects,
+  projectPath,
+  webNiches as niches,
+} from "../../lib/projects.mjs";
 
 const description =
-  "Explore 25 Awwal Productions web development projects by niche, including sportswear, fashion, property, skincare, embroidery and local services.";
+  "Explore 21 featured Awwal Productions web development projects by niche, including sportswear, fashion, property, skincare, embroidery and local services.";
 export const metadata = {
-  title: "Web Development Portfolio by Niche | Awwal Productions",
+  title: "Featured Web Development Projects | Awwal Productions",
   description,
   alternates: { canonical: "/portfolio" },
   openGraph: {
-    title: "Web Development Portfolio by Niche | Awwal Productions",
+    title: "Featured Web Development Projects | Awwal Productions",
     description,
     url: "/portfolio",
     siteName: "Awwal Productions",
@@ -22,7 +26,7 @@ export default function PortfolioPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Awwal Productions Web Development Portfolio",
+    name: "Awwal Productions Featured Web Development Projects",
     url: "https://awwalproductions.com/portfolio",
     mainEntity: {
       "@type": "ItemList",
@@ -53,14 +57,14 @@ export default function PortfolioPage() {
             </div>
             <span className="eyebrow">AWWAL PRODUCTIONS / WEB DEVELOPMENT</span>
             <h1>
-              Different industries.
+              Featured projects.
               <br />
-              <span className="text-lime">One creative partner.</span>
+              <span className="text-lime">Built for different businesses.</span>
             </h1>
             <p>
               Explore our web development work by niche—from apparel
-              manufacturers and online stores to property developers, skincare
-              clinics and local services.
+              manufacturers to property developers, skincare clinics and local
+              services.
             </p>
             <PortfolioNav active="/portfolio" />
           </div>
@@ -69,7 +73,8 @@ export default function PortfolioPage() {
           <div className="container">
             <div className="portfolio-count-row">
               <span>
-                <strong>{projects.length}</strong> web development projects
+                <strong>{projects.length}</strong> featured web development
+                projects
               </span>
               <span>
                 <strong>{String(niches.length).padStart(2, "0")}</strong>{" "}

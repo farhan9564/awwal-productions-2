@@ -1,3 +1,4 @@
+import { shopifyPortfolioPath } from "../lib/projects.mjs";
 import { socialPortfolioPath } from "../lib/social-projects.mjs";
 import { metaCases, metaCasePath } from "../lib/meta-cases.mjs";
 import assert from "node:assert/strict";
@@ -5,6 +6,7 @@ import { pages as legacyPages } from "../lib/routes.mjs";
 import { newProjects, projectPath } from "../lib/projects.mjs";
 const pages = [
   ...legacyPages,
+  { path: shopifyPortfolioPath },
   { path: socialPortfolioPath },
   ...metaCases
     .filter((study) => !["mbm", "digikon"].includes(study.slug))
@@ -32,6 +34,16 @@ const responses = await Promise.all(
     return html;
   }),
 );
+const webPortfolio =
+  responses[pages.findIndex((page) => page.path === "/portfolio")];
+const shopifyPortfolio =
+  responses[pages.findIndex((page) => page.path === shopifyPortfolioPath)];
+assert.ok(!webPortfolio.includes('data-platform="Shopify"'));
+assert.equal(
+  (shopifyPortfolio.match(/data-platform="Shopify"/g) || []).length,
+  4,
+);
+assert.ok(webPortfolio.includes("Featured projects."));
 const images = new Set(
   responses.flatMap((html) =>
     [...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map((match) => match[1]),

@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
-import { niches, projects } from "../lib/projects.mjs";
+import {
+  webNiches as niches,
+  webProjects as projects,
+} from "../lib/projects.mjs";
 import ProjectCard from "./ProjectCard";
 
 export default function ProjectGallery() {
