@@ -1,3 +1,4 @@
+import SocialProjectCard from "./SocialProjectCard";
 import Link from "next/link";
 import {
   socialProjects,
@@ -25,21 +26,7 @@ export default function SocialPortfolioTeaser() {
             </Link>
           </div>
         </div>
-        <div className="social-brand-links">
-          {socialProjects.map((project) => (
-            <a
-              key={project.handle}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ "--social-accent": project.accent }}
-            >
-              <span>{project.name}</span>
-              <small>{project.niche}</small>
-              <b aria-hidden="true">↗</b>
-            </a>
-          ))}
-        </div>
+        <div className="social-project-grid">{socialProjects.map((project, index) => <SocialProjectCard key={project.handle} project={project} index={index} />)}</div>
       </div>
     </section>
   );

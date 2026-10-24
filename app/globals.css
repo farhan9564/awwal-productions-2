@@ -4513,3 +4513,36 @@ p {
     @keyframes card-arrive { from { opacity: .3; translate: 0 28px; } to { opacity: 1; translate: 0 0; } }
   }
 }
+/* Awwal's shared portfolio and services card system. */
+.work-section, .floating-work { background: #0d1110; color: #f7f8f4; }
+.work-section .lead, .work-section .portfolio-note, .portfolio-home-bottom > span, .niche-results { color: #aeb9b1; }
+.work-section .eyebrow, .shopify-section-accent, .work-section .text-link, .niche-group-heading h2 { color: var(--lime); }
+.portfolio-count-row, .niche-group-heading { color: #aeb9b1; border-color: #ffffff20; }
+.portfolio-count-row strong { color: white; }
+.niche-filter-list .filter { color: #dbe3dc; border-color: #ffffff30; }
+.niche-filter-list .filter.active { background: var(--lime); color: #10170b; }
+.work-stage-word { color: #1a241b; }
+.work-stage-orbit { border-color: #caff2b20; }
+.work-stage-note, .work-stage-note > span:first-child { color: var(--lime); }
+.featured-browser-card, .branded-project-card { background: #171e19; border: 1px solid #caff2b28; color: white; border-radius: 20px; padding: 8px; box-shadow: 0 25px 55px #0005; }
+.featured-browser-chrome, .niche-browser-bar { background: #202a22; color: #bac7bc; }
+.featured-browser-caption > div > span, .branded-project-card .project-type { color: var(--lime); }
+.branded-project-card .project-caption { padding: 22px 16px 14px; }
+.branded-project-card .project-caption h3 { color: #f7f8f4; }
+.branded-project-card .project-caption p { color: #aeb9b1; }
+.branded-project-card .project-arrow { color: #12190c; background: var(--lime); }
+.portfolio-project-grid { gap: 55px 35px; padding-block: 18px; }
+.service-motion-card { min-width: 0; border-radius: 24px; background: #151d18; }
+.service-motion-card .service-tile { height: 100%; opacity: 1; transform: none; border-radius: 24px; background: radial-gradient(ellipse at top right, #caff2b12, transparent 65%), #141b17; border-color: #caff2b30; }
+.service-motion-card .tile-graphic { width: 90px; height: 90px; transform: rotate(-8deg); background: #caff2b12; transition: transform .5s; }
+.service-motion-card:hover .tile-graphic { transform: rotate(0) scale(1.06); }
+.service-motion-card .tile-graphic svg { width: 48px; height: 48px; }
+.campaign-card-preview { display: block; position: relative; border-radius: 12px; overflow: hidden; margin: 22px 0; background: #edf1ec; }
+.campaign-card-preview img { width: 100%; height: 175px; object-fit: cover; object-position: top left; transition: transform .6s; }
+.campaign-card-preview:hover img { transform: scale(1.04); }
+.campaign-card-preview span { position: absolute; right: 12px; bottom: 12px; padding: 9px 12px; background: var(--lime); color: #131a0c; border-radius: 30px; font-size: 9px; font-weight: 700; }
+.social-project-card { --social-accent: #caff2b !important; background: radial-gradient(ellipse at top right, #caff2b10, transparent 65%), #141b17; border-color: #caff2b30; border-radius: 24px; }
+.social-brand-initials { transform: rotate(-6deg); border-radius: 18px; transition: transform .4s; }
+.social-project-card:hover .social-brand-initials { transform: rotate(0); }
+@media(min-width:851px) { .portfolio-project-grid > :nth-child(even), .social-project-grid > :nth-child(3n+2), .service-grid > :nth-child(even) { margin-top: 42px; } }
+@media(prefers-reduced-motion:reduce) { .service-motion-card .tile-graphic, .social-brand-initials { transform: none; } }

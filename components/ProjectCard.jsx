@@ -6,7 +6,7 @@ export default function ProjectCard({ project, niche }) {
   const domain = new URL(project.url).hostname;
   return (
     <MotionCard
-      className="portfolio-project niche-project"
+      className="portfolio-project niche-project branded-project-card"
       data-niche={project.niche}
       data-platform={project.platform}
     >

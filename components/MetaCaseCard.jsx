@@ -13,6 +13,7 @@ export default function MetaCaseCard({ study, index = 0 }) {
           {study.group === "ecommerce" ? "E-COMMERCE" : "LEAD GENERATION"}
         </span>
       </div>
+      {study.images?.[0] && <Link href={metaCasePath(study)} className="campaign-card-preview" aria-label={`Explore ${study.name} results`}><img src={study.images[0].src} alt={`${study.name} campaign source screenshot`} loading="lazy" /><span>CAMPAIGN RESULTS ↗</span></Link>}
       <div className="report-card-head">
         <div>
           <span className="meta-case-niche">{study.niche}</span>

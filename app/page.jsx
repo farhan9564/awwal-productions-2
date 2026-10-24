@@ -1,3 +1,4 @@
+import MotionCard from "../components/MotionCard";
 import WorkExplorer from "../components/WorkExplorer";
 import FeaturedWebProjects from "../components/FeaturedWebProjects";
 import ShopifyProjectsSection from "../components/ShopifyProjectsSection";
@@ -188,7 +189,7 @@ export default function Page() {
               </p>
             </div>
             <div className="service-grid">
-              <Link
+              <MotionCard className="service-motion-card"><Link
                 className="service-tile reveal"
                 href="/services/web-development"
                 prefetch={false}
@@ -211,8 +212,8 @@ export default function Page() {
                   <span>{"EXPLORE SERVICE"}</span>
                   <span aria-hidden="true">{"↗"}</span>
                 </div>
-              </Link>
-              <Link
+              </Link></MotionCard>
+              <MotionCard className="service-motion-card"><Link
                 className="service-tile reveal"
                 href="/services/digital-marketing"
                 prefetch={false}
@@ -235,8 +236,8 @@ export default function Page() {
                   <span>{"EXPLORE SERVICE"}</span>
                   <span aria-hidden="true">{"↗"}</span>
                 </div>
-              </Link>
-              <Link
+              </Link></MotionCard>
+              <MotionCard className="service-motion-card"><Link
                 className="service-tile reveal"
                 href="/services/social-media-management"
                 prefetch={false}
@@ -261,8 +262,8 @@ export default function Page() {
                   <span>{"EXPLORE SERVICE"}</span>
                   <span aria-hidden="true">{"↗"}</span>
                 </div>
-              </Link>
-              <Link
+              </Link></MotionCard>
+              <MotionCard className="service-motion-card"><Link
                 className="service-tile reveal"
                 href="/services/shopify-development"
                 prefetch={false}
@@ -285,7 +286,7 @@ export default function Page() {
                   <span>{"EXPLORE SERVICE"}</span>
                   <span aria-hidden="true">{"↗"}</span>
                 </div>
-              </Link>
+              </Link></MotionCard>
             </div>
           </div>
         </section>

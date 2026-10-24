@@ -1,6 +1,7 @@
+import MotionCard from "./MotionCard";
 export default function SocialProjectCard({ project, index }) {
   return (
-    <article
+    <MotionCard
       className="social-project-card"
       style={{ "--social-accent": project.accent }}
     >
@@ -49,6 +50,6 @@ export default function SocialProjectCard({ project, index }) {
       >
         View Instagram profile <span aria-hidden="true">↗</span>
       </a>
-    </article>
+    </MotionCard>
   );
 }
