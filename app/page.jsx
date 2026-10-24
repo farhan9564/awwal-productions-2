@@ -1,3 +1,4 @@
+import FeaturedMetaCases from "../components/FeaturedMetaCases";
 import Link from "next/link";
 
 export const metadata = {
@@ -838,134 +839,7 @@ export default function Page() {
           </div>
         </section>
         {"\n"}
-        <section className="padded-section home-ads-cases">
-          <div className="container">
-            <div className="section-head">
-              <div className="reveal">
-                <span className="eyebrow">{"Beyond development"}</span>
-                <h2 className="section-title">
-                  {"Campaign results."}
-                  <br />
-                  <span className="text-lime">{"With context."}</span>
-                </h2>
-              </div>
-              <div className="reveal">
-                <p className="lead">
-                  {
-                    "Two campaign case studies from our Meta Ads portfolio. Explore the strategy, source reports and results."
-                  }
-                </p>
-                <Link
-                  className="text-link"
-                  href="/portfolio/meta-ads"
-                  prefetch={false}
-                >
-                  {"Discover Meta Ads projects ↗"}
-                </Link>
-              </div>
-            </div>
-            <div className="report-grid report-grid-home">
-              <article className="report-card report-digikon reveal">
-                {"\n"}
-                <div className="report-card-top">
-                  <span>{"01 / CAMPAIGN STUDY"}</span>
-                  <span>{"WEB DEVELOPMENT AGENCY"}</span>
-                </div>
-                {"\n"}
-                <div className="report-card-head">
-                  <div>
-                    <h3>
-                      {"Digikon Solutions"}
-                      <span className="report-title-dot">{"."}</span>
-                    </h3>
-                    <p>
-                      {
-                        "Five-month growth program using iterative Meta Ads creative and audience testing."
-                      }
-                    </p>
-                  </div>
-                  <span aria-hidden="true" className="report-card-arrow">
-                    {"↗"}
-                  </span>
-                </div>
-                {"\n"}
-                <div className="report-card-metrics">
-                  <div>
-                    <b>{"3,900+"}</b>
-                    <span>{"Qualified contacts"}</span>
-                  </div>
-                  <div>
-                    <b>{"PKR 352K"}</b>
-                    <span>{"Total ad spend"}</span>
-                  </div>
-                  <div>
-                    <b>{"2M+"}</b>
-                    <span>{"Impressions"}</span>
-                  </div>
-                </div>
-                {"\n"}
-                <Link
-                  className="report-card-link"
-                  href="/portfolio/digikon"
-                  prefetch={false}
-                >
-                  {"Explore case study "}
-                  <span aria-hidden="true">{"↗"}</span>
-                </Link>
-                {"\n"}
-              </article>
-              <article className="report-card report-mbm reveal">
-                {"\n"}
-                <div className="report-card-top">
-                  <span>{"02 / CAMPAIGN STUDY"}</span>
-                  <span>{"CRICKET E-COMMERCE"}</span>
-                </div>
-                {"\n"}
-                <div className="report-card-head">
-                  <div>
-                    <h3>
-                      {"MBM Sports"}
-                      <span className="report-title-dot">{"."}</span>
-                    </h3>
-                    <p>
-                      {
-                        "One-month purchase-focused campaigns for a new consumer cricket brand."
-                      }
-                    </p>
-                  </div>
-                  <span aria-hidden="true" className="report-card-arrow">
-                    {"↗"}
-                  </span>
-                </div>
-                {"\n"}
-                <div className="report-card-metrics">
-                  <div>
-                    <b>{"5.46×"}</b>
-                    <span>{"Purchase ROAS"}</span>
-                  </div>
-                  <div>
-                    <b>{"63"}</b>
-                    <span>{"Purchases in visible rows"}</span>
-                  </div>
-                  <div>
-                    <b>{"PKR 47.6K"}</b>
-                    <span>{"Ad spend"}</span>
-                  </div>
-                </div>
-                {"\n"}
-                <Link
-                  className="report-card-link"
-                  href="/portfolio/mbm"
-                  prefetch={false}
-                >
-                  {"Explore case study "}
-                  <span aria-hidden="true">{"↗"}</span>
-                </Link>
-                {"\n"}
-              </article>
-            </div>
-          </div>
-        </section>
+        <FeaturedMetaCases />
         <section className="padded-section">
           <div className="container process-layout">
             <div className="process-sticky reveal">
@@ -1096,7 +970,7 @@ export default function Page() {
                 </summary>
                 <p>
                   {
-                    "Explore 25 web development projects and two documented Meta Ads studies. Our project covers are branded illustrations, not screenshots of those sites."
+                    "Explore 25 web development projects and 13 Meta Ads case studies. Our project covers are branded illustrations, not screenshots of those sites."
                   }
                 </p>
               </details>

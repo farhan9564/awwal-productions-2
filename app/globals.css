@@ -3872,3 +3872,214 @@ p {
     transition: none;
   }
 }
+
+/* Meta Ads results retain the source metric names and reporting scope. */
+.meta-case-filters {
+  margin: 0 0 15px;
+}
+.meta-case-filters .filter span {
+  margin-left: 8px;
+  opacity: 0.7;
+}
+.meta-case-result-count {
+  font-size: 12px;
+  color: #606b60;
+  margin-bottom: 30px;
+}
+.meta-case-card {
+  min-height: 440px;
+}
+.meta-case-card .report-card-head {
+  margin-top: 35px;
+}
+.meta-case-card .report-card-head h3 {
+  font-size: clamp(28px, 3vw, 42px);
+  margin-top: 10px;
+}
+.meta-case-niche {
+  display: block;
+  color: #b0bdb1;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+.meta-case-card .report-card-metrics {
+  margin-bottom: 0;
+}
+.meta-case-card .report-card-metrics dt {
+  font-size: 10px;
+  color: #c0c5c0;
+  line-height: 1.5;
+  min-height: 32px;
+}
+.meta-case-card .report-card-metrics dt small {
+  display: block;
+  color: #919f91;
+  font-size: 9px;
+}
+.meta-case-card .report-card-metrics dd {
+  margin: 9px 0 0;
+  font: 700 clamp(17px, 2vw, 27px)/1.15 var(--display);
+  letter-spacing: -0.045em;
+  color: var(--lime);
+  overflow-wrap: anywhere;
+}
+.meta-report-period {
+  color: #aab3b0;
+  max-width: 900px;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 35px;
+}
+.meta-report-period strong {
+  color: #d8e0d8;
+  margin-right: 12px;
+}
+.meta-dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 15px;
+  margin: 32px 0 18px;
+}
+.meta-dashboard-metrics dd {
+  margin: 0;
+  color: #fff;
+  font: 700 clamp(26px, 3vw, 42px)/1.15 var(--display);
+  letter-spacing: -0.055em;
+  overflow-wrap: anywhere;
+}
+.meta-dashboard-metrics dt {
+  margin-top: 18px;
+  font: 600 13px/1.5 var(--display);
+  color: #e2e9df;
+}
+.meta-dashboard-metrics .report-metric small {
+  margin-top: 10px;
+}
+.meta-strategy-list {
+  padding-left: 22px;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+  color: #b8c2bd;
+  font-size: 15px;
+  line-height: 1.85;
+}
+.meta-strategy-list li::marker {
+  color: var(--lime);
+  font-family: var(--display);
+}
+.meta-business-outcomes {
+  margin-top: 85px;
+}
+.meta-business-outcomes .sub-title {
+  margin-top: 20px;
+}
+.meta-business-outcomes .lead {
+  max-width: 850px;
+}
+.meta-source-notes {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+  margin-top: 40px;
+  color: #aebbb2;
+  font-size: 13px;
+  line-height: 1.85;
+}
+.meta-source-notes summary {
+  color: #e3e9e1;
+  font-weight: 600;
+  cursor: pointer;
+}
+.meta-source-notes ul {
+  padding-left: 22px;
+  display: grid;
+  gap: 14px;
+  margin: 22px 0 0;
+  max-width: 1000px;
+}
+.report-docs .meta-evidence-grid {
+  max-width: none;
+}
+.meta-evidence-grid {
+  display: grid;
+  gap: 36px;
+  margin-top: 36px;
+}
+.meta-evidence {
+  margin: 0;
+  min-width: 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+}
+.meta-evidence > a {
+  display: block;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #f6f7f8;
+  border: 1px solid #ffffff22;
+}
+.meta-evidence img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.meta-evidence figcaption {
+  display: grid;
+  gap: 7px;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #acb6ae;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.meta-evidence figcaption strong {
+  font-weight: 600;
+  color: #e1e8dd;
+}
+.meta-evidence figcaption > a {
+  color: var(--lime);
+  width: fit-content;
+  border-bottom: 1px solid #caff2b55;
+  padding-bottom: 3px;
+}
+.meta-evidence-source {
+  font-size: 11px;
+  color: #8a988f;
+}
+@media (max-width: 600px) {
+  .meta-case-card {
+    padding-inline: 22px;
+    min-height: 430px;
+  }
+  .meta-case-card .report-card-metrics {
+    gap: 10px;
+  }
+  .meta-case-card .report-card-metrics dd {
+    font-size: clamp(16px, 4.7vw, 22px);
+  }
+  .meta-case-card .report-card-metrics dt {
+    font-size: 9px;
+  }
+  .meta-dashboard-metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .meta-dashboard-metrics .report-metric {
+    padding: 20px 15px;
+  }
+  .meta-dashboard-metrics dd {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+  .meta-dashboard-metrics .report-metric small {
+    font-size: 10px;
+  }
+  .meta-business-outcomes {
+    margin-top: 60px;
+  }
+  .meta-report-period {
+    font-size: 11px;
+  }
+}

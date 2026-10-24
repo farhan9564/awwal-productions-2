@@ -1,3 +1,5 @@
+import { metaCases } from "../../../lib/meta-cases.mjs";
+import MetaCaseStudy, { caseMetadata } from "../../../components/MetaCaseStudy";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { newProjects, niches, projectPath } from "../../../lib/projects.mjs";
@@ -5,11 +7,16 @@ import ProjectCard from "../../../components/ProjectCard";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return newProjects.map((project) => ({ slug: project.slug }));
+  return [
+    ...newProjects,
+    ...metaCases.filter((study) => !["mbm", "digikon"].includes(study.slug)),
+  ].map((project) => ({ slug: project.slug }));
 }
 export async function generateMetadata({ params }) {
   const { slug } = await params;
+  const study = metaCases.find((item) => item.slug === slug);
   const project = newProjects.find((item) => item.slug === slug);
+  if (study) return caseMetadata(study);
   if (!project) return {};
   return {
     title: `${project.name} — Web Development Project | Awwal Productions`,
@@ -25,7 +32,9 @@ export async function generateMetadata({ params }) {
 }
 export default async function ProjectPage({ params }) {
   const { slug } = await params;
+  const study = metaCases.find((item) => item.slug === slug);
   const project = newProjects.find((item) => item.slug === slug);
+  if (study) return <MetaCaseStudy study={study} />;
   if (!project) notFound();
   const niche = niches.find((item) => item.id === project.niche);
   return (
