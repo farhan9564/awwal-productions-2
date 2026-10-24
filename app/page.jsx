@@ -493,7 +493,7 @@ export default function Page() {
                 </summary>
                 <p>
                   {
-                    "Explore 21 featured web development projects, four Shopify store projects and 13 Meta Ads case studies. Our project covers are branded illustrations, not screenshots of those sites."
+                    "Explore 21 web development projects, four Shopify store projects and 13 Meta Ads case studies. Our project covers are branded illustrations, not screenshots of those sites."
                   }
                 </p>
               </details>

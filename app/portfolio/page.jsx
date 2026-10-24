@@ -1,3 +1,4 @@
+import FeaturedWebProjects from "../../components/FeaturedWebProjects";
 import PortfolioNav from "../../components/PortfolioNav";
 import Link from "next/link";
 import ProjectGallery from "../../components/ProjectGallery";
@@ -8,7 +9,7 @@ import {
 } from "../../lib/projects.mjs";
 
 const description =
-  "Explore 21 featured Awwal Productions web development projects by niche, including sportswear, fashion, property, skincare, embroidery and local services.";
+  "Explore featured Fast Apparel Factory and Al Badar Impex projects, plus 21 Awwal Productions web development projects by niche, including sportswear, fashion, property, skincare, embroidery and local services.";
 export const metadata = {
   title: "Featured Web Development Projects | Awwal Productions",
   description,
@@ -69,12 +70,13 @@ export default function PortfolioPage() {
             <PortfolioNav active="/portfolio" />
           </div>
         </section>
-        <section className="padded-section work-section">
+        <FeaturedWebProjects />
+        <section className="padded-section work-section" id="all-web-projects">
           <div className="container">
+            <h2 className="section-title">All web development projects.</h2>
             <div className="portfolio-count-row">
               <span>
-                <strong>{projects.length}</strong> featured web development
-                projects
+                <strong>{projects.length}</strong> web development projects
               </span>
               <span>
                 <strong>{String(niches.length).padStart(2, "0")}</strong>{" "}

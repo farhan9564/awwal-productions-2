@@ -35,7 +35,10 @@ test("the four supplied Shopify stores are separated from web development withou
       webProjects.some((project) => project.niche === niche.id),
     ),
   );
-  assert.equal(featuredWebProjects.length, 4);
+  assert.deepEqual(
+    featuredWebProjects.map((project) => project.slug),
+    ["fast-apparel-02", "al-badar-impex"],
+  );
   assert.ok(
     featuredWebProjects.every((project) => webProjects.includes(project)),
   );

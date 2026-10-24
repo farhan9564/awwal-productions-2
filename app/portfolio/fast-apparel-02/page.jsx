@@ -2,15 +2,15 @@ import Link from "next/link";
 
 export const metadata = {
   title:
-    "Fast Apparel / Edition 02 | Alternative Apparel Website Concept Website Project | Awwal",
+    "Fast Apparel Factory | B2B Custom Apparel Manufacturing Website Project | Awwal",
   description:
-    "Explore Fast Apparel / Edition 02 in the Awwal Productions website portfolio: Alternative apparel website concept. See the project overview and open the original website.",
+    "Explore Fast Apparel Factory in the Awwal Productions website portfolio: B2B custom apparel manufacturing. See the project overview and open the original website.",
   alternates: { canonical: "/portfolio/fast-apparel-02" },
   openGraph: {
     title:
-      "Fast Apparel / Edition 02 | Alternative Apparel Website Concept Website Project | Awwal",
+      "Fast Apparel Factory | B2B Custom Apparel Manufacturing Website Project | Awwal",
     description:
-      "Explore Fast Apparel / Edition 02 in the Awwal Productions website portfolio: Alternative apparel website concept. See the project overview and open the original website.",
+      "Explore Fast Apparel Factory in the Awwal Productions website portfolio: B2B custom apparel manufacturing. See the project overview and open the original website.",
     url: "/portfolio/fast-apparel-02",
     siteName: "Awwal Productions",
     type: "website",
@@ -26,7 +26,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html:
-            '{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://awwalproductions.com/#organization", "name": "Awwal Productions", "url": "https://awwalproductions.com/", "logo": "https://awwalproductions.com/assets/awwal-full-logo.png", "email": "info@awwalproductions.com", "telephone": "+923034045884", "description": "Website development, Shopify store development, digital advertising and social media management for international brands.", "address": {"@type": "PostalAddress", "addressCountry": "PK"}, "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": "info@awwalproductions.com", "telephone": "+923034045884", "availableLanguage": ["English", "Urdu"]}}, {"@type": "WebSite", "@id": "https://awwalproductions.com/#website", "name": "Awwal Productions", "url": "https://awwalproductions.com/", "publisher": {"@id": "https://awwalproductions.com/#organization"}}, {"@type": "WebPage", "@id": "https://awwalproductions.com/portfolio/fast-apparel-02#webpage", "url": "https://awwalproductions.com/portfolio/fast-apparel-02", "name": "Fast Apparel / Edition 02 | Alternative Apparel Website Concept Website Project | Awwal", "description": "Explore Fast Apparel / Edition 02 in the Awwal Productions website portfolio: Alternative apparel website concept. See the project overview and open the original website.", "isPartOf": {"@id": "https://awwalproductions.com/#website"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "@id": "https://awwalproductions.com/portfolio/fast-apparel-02#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://awwalproductions.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://awwalproductions.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Fast Apparel / Edition 02", "item": "https://awwalproductions.com/portfolio/fast-apparel-02"}]}, {"@type": "CreativeWork", "name": "Fast Apparel / Edition 02 — Website Portfolio", "url": "https://awwalproductions.com/portfolio/fast-apparel-02", "description": "Explore Fast Apparel / Edition 02 in the Awwal Productions website portfolio: Alternative apparel website concept. See the project overview and open the original website.", "publisher": {"@id": "https://awwalproductions.com/#organization"}, "about": {"@type": "WebSite", "url": "https://fast-apparel-02.vercel.app/"}}]}',
+            '{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://awwalproductions.com/#organization", "name": "Awwal Productions", "url": "https://awwalproductions.com/", "logo": "https://awwalproductions.com/assets/awwal-full-logo.png", "email": "info@awwalproductions.com", "telephone": "+923034045884", "description": "Website development, Shopify store development, digital advertising and social media management for international brands.", "address": {"@type": "PostalAddress", "addressCountry": "PK"}, "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": "info@awwalproductions.com", "telephone": "+923034045884", "availableLanguage": ["English", "Urdu"]}}, {"@type": "WebSite", "@id": "https://awwalproductions.com/#website", "name": "Awwal Productions", "url": "https://awwalproductions.com/", "publisher": {"@id": "https://awwalproductions.com/#organization"}}, {"@type": "WebPage", "@id": "https://awwalproductions.com/portfolio/fast-apparel-02#webpage", "url": "https://awwalproductions.com/portfolio/fast-apparel-02", "name": "Fast Apparel Factory | B2B Custom Apparel Manufacturing Website Project | Awwal", "description": "Explore Fast Apparel Factory in the Awwal Productions website portfolio: B2B custom apparel manufacturing. See the project overview and open the original website.", "isPartOf": {"@id": "https://awwalproductions.com/#website"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "@id": "https://awwalproductions.com/portfolio/fast-apparel-02#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://awwalproductions.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://awwalproductions.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Fast Apparel Factory", "item": "https://awwalproductions.com/portfolio/fast-apparel-02"}]}, {"@type": "CreativeWork", "name": "Fast Apparel Factory — Website Portfolio", "url": "https://awwalproductions.com/portfolio/fast-apparel-02", "description": "Explore Fast Apparel Factory in the Awwal Productions website portfolio: B2B custom apparel manufacturing. See the project overview and open the original website.", "publisher": {"@id": "https://awwalproductions.com/#organization"}, "about": {"@type": "WebSite", "url": "https://fast-apparel-02.vercel.app/"}}]}',
         }}
       />
       <main id="main">
@@ -41,7 +41,7 @@ export default function Page() {
                 {"Portfolio"}
               </Link>
               <span>{"/"}</span>
-              <span>{"Fast Apparel / Edition 02"}</span>
+              <span>{"Fast Apparel Factory"}</span>
             </div>
             <div className="project-single-top">
               <span className="eyebrow">
@@ -52,13 +52,13 @@ export default function Page() {
               </span>
             </div>
             <h1>
-              {"Fast Apparel / Edition 02"}
+              {"Fast Apparel Factory"}
               <span className="single-title-dot">{"."}</span>
             </h1>
             <div className="single-summary-row">
               <p>
                 {
-                  "Alternative Apparel Website Concept website portfolio project. Explore the brand context and view the original website."
+                  "B2B Custom Apparel Manufacturing website portfolio project. Explore the brand context and view the original website."
                 }
               </p>
               <a
@@ -151,7 +151,7 @@ export default function Page() {
             <div className="single-project-data">
               <div>
                 <span>{"PROJECT"}</span>
-                <strong>{"Fast Apparel / Edition 02"}</strong>
+                <strong>{"Fast Apparel Factory"}</strong>
               </div>
               <div>
                 <span>{"SECTOR"}</span>
@@ -187,9 +187,7 @@ export default function Page() {
             </div>
             <div className="single-story-copy reveal">
               <h3>
-                {
-                  "Fast Apparel / Edition 02: Alternative apparel website concept"
-                }
+                {"Fast Apparel Factory: B2B custom apparel manufacturing"}
               </h3>
               <p>
                 {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { featuredWebProjects, webProjects, niches } from "../lib/projects.mjs";
+import { featuredWebProjects, niches } from "../lib/projects.mjs";
 import ProjectCard from "./ProjectCard";
 export default function FeaturedWebProjects() {
   return (
@@ -11,12 +11,14 @@ export default function FeaturedWebProjects() {
             <h2 className="section-title">
               Featured projects.
               <br />
-              <span className="shopify-section-accent">Across industries.</span>
+              <span className="shopify-section-accent">
+                Built for manufacturers.
+              </span>
             </h2>
           </div>
           <p className="lead">
-            Selected website projects for manufacturers, property developers and
-            service businesses.
+            Fast Apparel Factory and Al Badar Impex (ABI Sports)—two featured
+            manufacturing website projects.
           </p>
         </div>
         <div className="portfolio-project-grid">
@@ -29,9 +31,11 @@ export default function FeaturedWebProjects() {
           ))}
         </div>
         <div className="portfolio-home-bottom">
-          <span>{webProjects.length} FEATURED WEB DEVELOPMENT PROJECTS</span>
+          <span>
+            {featuredWebProjects.length} FEATURED WEB DEVELOPMENT PROJECTS
+          </span>
           <Link className="btn btn-dark" href="/portfolio">
-            Explore featured projects ↗
+            View all web development projects ↗
           </Link>
         </div>
       </div>

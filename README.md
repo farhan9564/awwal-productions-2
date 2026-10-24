@@ -70,3 +70,7 @@ Dashboard metrics, calculations and reported business outcomes are labelled sepa
 ## Separate Shopify portfolio
 
 `/portfolio/shopify` lists exactly Fast Apparel, IBH Apparel, JSONS Sports and Iqra Studio, as identified by the user. These four stores are excluded from the web-development gallery, which now displays 21 featured projects across eight niches. Existing store detail URLs and legacy redirects remain valid; their pages identify them as Shopify Store Development projects. The homepage and Shopify service page use the same four-store data, and the shared portfolio navigation has a separate Shopify category.
+
+## Featured selections
+
+Featured web projects are Fast Apparel Factory (`fast-apparel-02`, the factory site at fast-apparel-02.vercel.app) and Al Badar Impex / ABI Sports. Featured Meta Ads cases are Iqra Studio and Kuwait Electronics Campaign A. The complete project and case-study collections remain accessible through their portfolio links.

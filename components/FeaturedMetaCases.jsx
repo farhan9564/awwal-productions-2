@@ -1,13 +1,7 @@
 import Link from "next/link";
-import { metaCases } from "../lib/meta-cases.mjs";
+import { featuredMetaCases } from "../lib/meta-cases.mjs";
 import MetaCaseCard from "./MetaCaseCard";
 export default function FeaturedMetaCases() {
-  const featured = [
-    "mbm",
-    "iqra-studio-ads",
-    "ora-aesthetic-wellness",
-    "digikon",
-  ].map((slug) => metaCases.find((study) => study.slug === slug));
   return (
     <section className="padded-section home-ads-cases">
       <div className="container">
@@ -22,9 +16,8 @@ export default function FeaturedMetaCases() {
           </div>
           <div>
             <p className="lead">
-              Explore {metaCases.length} Meta Ads case studies across
-              e-commerce, clinics, property, education and service
-              businesses—with strategy, metrics and campaign screenshots.
+              Featured Meta Ads work for Iqra Studio and Kuwait Electronics,
+              with strategy, results and source screenshots.
             </p>
             <Link href="/portfolio/meta-ads" className="text-link">
               Discover all Meta Ads projects ↗
@@ -32,7 +25,7 @@ export default function FeaturedMetaCases() {
           </div>
         </div>
         <div className="report-grid">
-          {featured.map((study, index) => (
+          {featuredMetaCases.map((study, index) => (
             <MetaCaseCard key={study.slug} study={study} index={index} />
           ))}
         </div>

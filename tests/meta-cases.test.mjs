@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { access } from "node:fs/promises";
 import {
   metaCases,
+  featuredMetaCases,
   metaCasePath,
   archiveScreenshots,
 } from "../lib/meta-cases.mjs";
@@ -59,4 +60,11 @@ test("headlines retain snapshot metrics instead of conflicting narrative claims"
   assert.equal((710999 / 104182.71).toFixed(2), "6.82");
   assert.equal((3000000 / 200723.79).toFixed(2), "14.95");
   assert.equal((2000000 / 109773.3).toFixed(2), "18.22");
+});
+
+test("only Iqra Studio and Kuwait Electronics A are featured", () => {
+  assert.deepEqual(
+    featuredMetaCases.map((study) => study.slug),
+    ["iqra-studio-ads", "kuwait-electronics-a"],
+  );
 });
