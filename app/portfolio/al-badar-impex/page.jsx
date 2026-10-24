@@ -122,7 +122,7 @@ export default function Page() {
                     {"\n"}
                     <img
                       className="site-preview-image is-ready"
-                      src="/assets/previews/abisportswear.com.webp"
+                      src="/assets/previews/abi-sports-live.webp"
                       width="1200"
                       height="780"
                       loading="lazy"

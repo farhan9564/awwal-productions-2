@@ -122,7 +122,7 @@ export default function Page() {
                     {"\n"}
                     <img
                       className="site-preview-image is-ready"
-                      src="/assets/previews/fast-apparel.vercel.app.webp"
+                      src="/assets/previews/fast-apparel-concept-front.webp"
                       width="1200"
                       height="780"
                       loading="lazy"

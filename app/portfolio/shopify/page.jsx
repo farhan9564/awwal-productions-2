@@ -96,7 +96,7 @@ export default function ShopifyPortfolio() {
               ))}
             </div>
             <p className="portfolio-note">
-              Project covers are showcase graphics. Open a project overview or
+              Explore actual website homepage previews. Open a project overview or
               visit the live store.
             </p>
           </div>

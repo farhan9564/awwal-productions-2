@@ -88,7 +88,7 @@ export default function PortfolioPage() {
             </div>
             <ProjectGallery />
             <p className="portfolio-note">
-              Project covers are showcase graphics. Open a project to read its
+              Explore actual website homepage previews. Open a project to read its
               overview or visit its website.
             </p>
             <div className="portfolio-bottom-banner">

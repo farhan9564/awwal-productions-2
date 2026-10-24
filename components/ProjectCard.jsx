@@ -6,7 +6,7 @@ export default function ProjectCard({ project, niche }) {
   const domain = new URL(project.url).hostname;
   return (
     <MotionCard
-      className="portfolio-project niche-project branded-project-card"
+      className="portfolio-project niche-project branded-project-card front-project-card"
       data-niche={project.niche}
       data-platform={project.platform}
     >
@@ -32,7 +32,7 @@ export default function ProjectCard({ project, niche }) {
               width="1200"
               height="780"
               loading="lazy"
-              alt={`${project.name} project showcase graphic`}
+              alt={`${project.name} website homepage preview`}
             />
           ) : (
             <div className="niche-type-cover">
@@ -44,7 +44,7 @@ export default function ProjectCard({ project, niche }) {
               </span>
             </div>
           )}
-          <span className="niche-cover-caption">PROJECT SHOWCASE</span>
+          <span className="niche-cover-caption">HOMEPAGE PREVIEW</span>
           <span className="card-explore-pill">View project <span aria-hidden="true">↗</span></span>
         </div>
       </Link>

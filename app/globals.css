@@ -4564,3 +4564,37 @@ p {
 @media(max-width:850px){.service-studio-grid{grid-template-columns:1fr;gap:20px}.service-studio-scene{max-width:650px;width:100%;margin:auto}.service-studio-body h3{font-size:clamp(30px,7vw,49px)}}
 @media(max-width:480px){.service-studio-scene{padding:65px 9px}.service-studio-card{rotate:-2deg}.service-studio-body{padding:30px 22px}.service-studio-badge{padding:14px 16px}.service-studio-bottom{padding:20px 14px;font-size:7px}}
 @media(prefers-reduced-motion:reduce){.service-studio-card{rotate:0deg}}
+
+/* Homepage cards: a floating browser window for every web and Shopify project. */
+.portfolio-project-grid:has(.front-project-card) {
+  position: relative;
+  isolation: isolate;
+  gap: 80px 28px;
+  padding: 38px 14px 70px;
+  align-items: start;
+  background: radial-gradient(ellipse at 50% 40%, #caff2b07, transparent 65%);
+}
+.front-project-card {
+  position: relative;
+  rotate: -2deg;
+  transition: rotate .45s var(--ease), transform .45s var(--ease), box-shadow .45s;
+  box-shadow: 0 35px 65px #0007, 0 0 0 1px #caff2b0a;
+}
+.portfolio-project-grid > .front-project-card:nth-child(even) { rotate: 2deg; margin-top: 65px; }
+.front-project-card:hover, .front-project-card:focus-within { rotate: 0deg; z-index: 2; box-shadow: 0 40px 80px #0009; }
+.front-project-card .niche-project-art { height: auto; border: 0; border-radius: 12px; transform: none; }
+.front-project-card .niche-browser-bar { height: 34px; font-size: 9px; }
+.front-project-card .niche-cover { display: block; width: 100%; height: auto; aspect-ratio: 1.46; object-fit: cover; object-position: top; }
+.front-project-card .niche-cover-caption { color: #f7f8f4; background: #0d1110d9; border-radius: 4px; }
+.front-project-card .project-caption { min-height: 126px; align-items: center; }
+.front-project-card .project-caption h3 { font-size: clamp(22px, 2.3vw, 32px); letter-spacing: -.04em; }
+.front-project-card .project-caption p { font-size: 12px; }
+.front-project-card a:focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; }
+@media (max-width: 850px) {
+  .portfolio-project-grid:has(.front-project-card) { gap: 32px; padding: 15px 0 35px; }
+  .front-project-card, .portfolio-project-grid > .front-project-card:nth-child(even) { rotate: 0deg; margin-top: 0; }
+  .front-project-card .project-caption { min-height: 112px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .front-project-card, .portfolio-project-grid > .front-project-card:nth-child(even) { rotate: 0deg; transition: none; }
+}
