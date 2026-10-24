@@ -827,7 +827,7 @@ export default function Page() {
               </article>
             </div>
             <div className="portfolio-home-bottom">
-              <span>{"13 WEBSITE PROJECTS • META ADS COLLECTION"}</span>
+              <span>{"25 WEBSITE PROJECTS • META ADS COLLECTION"}</span>
               <Link className="btn btn-dark" href="/portfolio" prefetch={false}>
                 {"See all our work "}
                 <span aria-hidden="true" className="arr">
@@ -1096,7 +1096,7 @@ export default function Page() {
                 </summary>
                 <p>
                   {
-                    "Explore 13 supplied web portfolio links and two documented Meta Ads studies. Our project covers are branded illustrations, not screenshots of those sites."
+                    "Explore 25 web development projects and two documented Meta Ads studies. Our project covers are branded illustrations, not screenshots of those sites."
                   }
                 </p>
               </details>

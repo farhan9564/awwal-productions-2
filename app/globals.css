@@ -3605,3 +3605,270 @@ p {
   line-height: 1.6;
   margin-top: 18px;
 }
+
+/* Portfolio groups keep the work arranged by business niche. */
+.niche-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 30px 0 18px;
+}
+.niche-filter-list .filter {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-align: left;
+}
+.niche-filter-list .filter span {
+  font-size: 10px;
+  opacity: 0.7;
+}
+.niche-results {
+  color: #626b60;
+  font-size: 12px;
+  margin: 0 0 48px;
+}
+.niche-group {
+  margin-top: 65px;
+  animation: niche-enter 0.25s ease-out both;
+}
+.niche-group-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid #aab1a1;
+  padding-top: 25px;
+  margin-bottom: 28px;
+}
+.niche-group-heading h2 {
+  font: 700 clamp(27px, 3vw, 42px)/1.15 var(--display);
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+.niche-group-heading > span {
+  font: 600 10px var(--display);
+  letter-spacing: 0.12em;
+  color: #626b60;
+  white-space: nowrap;
+}
+.niche-project-art {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #151b1c;
+  height: 340px;
+  color: #fff;
+  border: 1px solid #0002;
+  transition: transform 0.35s var(--ease);
+}
+.portfolio-art-link:hover .niche-project-art {
+  transform: translateY(-5px);
+}
+.niche-browser-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  height: 40px;
+  padding: 0 18px;
+  background: #101416;
+  color: #bfc7c8;
+  font: 10px var(--body);
+  border-bottom: 1px solid #ffffff20;
+}
+.niche-browser-bar > span:first-child {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--niche-accent);
+}
+.niche-browser-bar > span:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.niche-cover {
+  width: 100%;
+  height: calc(100% - 40px);
+  object-fit: cover;
+  object-position: center;
+}
+.niche-type-cover {
+  height: calc(100% - 40px);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(140deg, #1c262a, #101719);
+}
+.niche-cover-label {
+  color: var(--niche-accent);
+  font-size: 9px;
+  letter-spacing: 0.17em;
+}
+.niche-type-cover strong {
+  font: 700 clamp(30px, 3.5vw, 47px)/1.08 var(--display);
+  letter-spacing: -0.055em;
+  max-width: 440px;
+  margin: 24px 0 10px;
+}
+.niche-type-cover p {
+  color: #b3bdbd;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+.niche-cover-cta {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  color: var(--niche-accent);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin-top: auto;
+  padding-top: 18px;
+}
+.niche-cover-cta span {
+  font-size: 23px;
+}
+.niche-cover-caption {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font: 8px var(--display);
+  letter-spacing: 0.12em;
+  color: #fff8;
+  background: #101719aa;
+  padding: 4px 6px;
+}
+.new-project-showcase {
+  max-width: 840px;
+  margin-inline: auto;
+}
+.new-project-showcase .niche-project-art {
+  height: 440px;
+}
+.new-project-showcase .project-caption {
+  color: white;
+}
+.new-project-showcase .project-type,
+.new-project-showcase .project-caption p {
+  color: #a5afab;
+}
+@keyframes niche-enter {
+  from {
+    opacity: 0.4;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* A short branded cover for every internal page change, without logo glow. */
+.logo-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: #08090b;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+.logo-transition.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.logo-transition-content {
+  width: min(290px, 65vw);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 28px;
+}
+.logo-transition-content img {
+  width: 100%;
+  height: auto;
+  filter: none;
+  animation: logo-transition-enter 0.42s var(--ease) both;
+}
+.logo-transition-line {
+  width: 110px;
+  height: 2px;
+  background: var(--lime);
+  transform-origin: left;
+  animation: logo-transition-progress 0.6s var(--ease) both;
+}
+@keyframes logo-transition-enter {
+  from {
+    opacity: 0;
+    transform: translateY(9px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes logo-transition-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@media (max-width: 600px) {
+  .niche-group {
+    margin-top: 45px;
+  }
+  .niche-group-heading {
+    align-items: flex-start;
+  }
+  .niche-group-heading h2 {
+    font-size: 27px;
+  }
+  .niche-group-heading > span {
+    font-size: 9px;
+    padding-top: 7px;
+  }
+  .niche-project-art {
+    height: 300px;
+  }
+  .niche-type-cover {
+    padding: 26px;
+  }
+  .niche-type-cover strong {
+    font-size: 37px;
+  }
+  .niche-filter-list .filter {
+    padding: 10px 13px;
+    font-size: 11px;
+  }
+  .new-project-showcase .niche-project-art {
+    height: 340px;
+  }
+  .portfolio-count-row {
+    gap: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-transition {
+    display: none;
+  }
+  .logo-transition-content img,
+  .logo-transition-line,
+  .niche-group {
+    animation: none;
+  }
+  .niche-project-art {
+    transition: none;
+  }
+}

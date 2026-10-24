@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SiteEffects from "../components/SiteEffects";
+import PageTransition from "../components/PageTransition";
 import "./globals.css";
 
 export const metadata = {
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
         <a className="skip" href="#main">
           Skip to main content
         </a>
+        <PageTransition />
         <SiteEffects />
         <Header />
         {children}

@@ -1,18 +1,10 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function SiteEffects() {
   const pathname = usePathname();
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(
-      () => setLoading(false),
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 450,
-    );
-    return () => clearTimeout(timer);
-  }, []);
   useEffect(() => {
     const reduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -118,20 +110,5 @@ export default function SiteEffects() {
     };
   }, [pathname]);
 
-  return loading ? (
-    <div className="preloader" aria-hidden="true">
-      <div className="preloader-center">
-        <img
-          src="/assets/awwal-logo.svg"
-          width="250"
-          height="104"
-          alt=""
-          style={{ margin: "0 auto" }}
-        />
-        <div className="loading-track" style={{ marginTop: "28px" }}>
-          <span style={{ width: "100%" }} />
-        </div>
-      </div>
-    </div>
-  ) : null;
+  return null;
 }

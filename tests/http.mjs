@@ -1,5 +1,10 @@
 import assert from "node:assert/strict";
-import { pages } from "../lib/routes.mjs";
+import { pages as legacyPages } from "../lib/routes.mjs";
+import { newProjects, projectPath } from "../lib/projects.mjs";
+const pages = [
+  ...legacyPages,
+  ...newProjects.map((project) => ({ path: projectPath(project) })),
+];
 const base = process.env.TEST_BASE_URL || "http://127.0.0.1:3101";
 const responses = await Promise.all(
   pages.map(async (page) => {
@@ -10,12 +15,14 @@ const responses = await Promise.all(
     const canonical = html.match(/<link rel="canonical" href="([^"]+)"/);
     assert.ok(canonical, `Canonical ${page.path}`);
     assert.equal(new URL(canonical[1]).pathname, page.path);
-    const redirect = await fetch(base + page.legacy, { redirect: "manual" });
-    assert.equal(redirect.status, 308, page.legacy);
-    assert.equal(
-      new URL(redirect.headers.get("location"), base).pathname,
-      page.path,
-    );
+    if (page.legacy) {
+      const redirect = await fetch(base + page.legacy, { redirect: "manual" });
+      assert.equal(redirect.status, 308, page.legacy);
+      assert.equal(
+        new URL(redirect.headers.get("location"), base).pathname,
+        page.path,
+      );
+    }
     return html;
   }),
 );
@@ -33,7 +40,7 @@ await Promise.all(
 );
 assert.equal((await fetch(base + "/this-page-does-not-exist")).status, 404);
 const sitemap = await (await fetch(base + "/sitemap.xml")).text();
-assert.equal((sitemap.match(/<loc>/g) || []).length, 26);
+assert.equal((sitemap.match(/<loc>/g) || []).length, pages.length);
 assert.ok(!sitemap.includes(".html"));
 const good = await fetch(base + "/api/enquiry", {
   method: "POST",
@@ -54,5 +61,5 @@ const bad = await fetch(base + "/api/enquiry", {
 });
 assert.equal(bad.status, 400);
 console.log(
-  `Passed: ${pages.length} pages, ${pages.length} permanent redirects, ${images.size} image URLs, canonical metadata, sitemap, 404 and enquiry API.`,
+  `Passed: ${pages.length} pages, ${legacyPages.length} permanent redirects, ${images.size} image URLs, canonical metadata, sitemap, 404 and enquiry API.`,
 );

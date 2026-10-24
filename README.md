@@ -1,6 +1,6 @@
 # Awwal Productions — React + Node.js
 
-The agency website now runs on Next.js App Router, React 19 and Node.js. Its existing design, supplied transparent logo, 26 pages, portfolio covers and campaign content are preserved as React components. Shared components handle the header, footer, mobile menu, animations and enquiry form.
+The agency website now runs on Next.js App Router, React 19 and Node.js. Its existing design, supplied transparent logo, 38 pages, portfolio covers and campaign content are preserved as React components. Shared components handle the header, footer, mobile menu, animations and enquiry form.
 
 ## Development
 
@@ -38,6 +38,12 @@ All 26 old `.html` URLs permanently redirect to their new routes. Extensionless 
 ## Enquiries
 
 `POST /api/enquiry` runs on Node.js, validates the form and prepares encoded email/WhatsApp links. It does not store enquiries or send messages. Visitors review and send the prepared message in their own email app or WhatsApp, preserving the original contact workflow. No mail service or secrets are required.
+
+## Portfolio and page transitions
+
+`lib/projects.mjs` contains 25 unique website projects grouped into nine niches. The portfolio filters and groups are React components. Twelve new project pages use the statically generated `/portfolio/[slug]` route; the existing project routes stay intact.
+
+`components/PageTransition.jsx` shows the supplied logo on internal page navigation and browser back/forward. External links, same-page anchors, downloads and modified clicks keep native behavior. Reduced-motion preferences disable the animated cover, and a timeout prevents a navigation failure from trapping the screen.
 
 ## Editing
 
