@@ -1,9 +1,11 @@
+import { socialPortfolioPath } from "../lib/social-projects.mjs";
 import { metaCases, metaCasePath } from "../lib/meta-cases.mjs";
 import assert from "node:assert/strict";
 import { pages as legacyPages } from "../lib/routes.mjs";
 import { newProjects, projectPath } from "../lib/projects.mjs";
 const pages = [
   ...legacyPages,
+  { path: socialPortfolioPath },
   ...metaCases
     .filter((study) => !["mbm", "digikon"].includes(study.slug))
     .map((study) => ({ path: metaCasePath(study) })),

@@ -1,6 +1,6 @@
 # Awwal Productions — React + Node.js
 
-The agency website now runs on Next.js App Router, React 19 and Node.js. Its existing design, supplied transparent logo, 49 pages, portfolio covers and campaign content are preserved as React components. Shared components handle the header, footer, mobile menu, animations and enquiry form.
+The agency website now runs on Next.js App Router, React 19 and Node.js. Its existing design, supplied transparent logo, 50 pages, portfolio covers and campaign content are preserved as React components. Shared components handle the header, footer, mobile menu, animations and enquiry form.
 
 ## Development
 
@@ -62,3 +62,7 @@ Portfolio cover images remain the existing showcase graphics. They should not be
 `lib/meta-cases.mjs` contains 13 cases extracted from the supplied 11 DOCX reports. Existing MBM and Digikon routes use the same shared case-study component as the 11 newly generated routes. `META-ADS-SOURCES.md` records numerical reconciliation and source scope. Screenshots in `public/assets/meta-ads/` are lossless encodings with pixel equality checked against the embedded originals. No source DOCX files are published.
 
 Dashboard metrics, calculations and reported business outcomes are labelled separately. The portfolio avoids adding overlapping snapshots or mixing currencies, and the homepage uses the same case-study records.
+
+## Social media portfolio
+
+`/portfolio/social-media` lists the five Instagram profiles supplied by the user. `lib/social-projects.mjs` is the shared source for the portfolio, service-page projects and homepage teaser. Profile names and broad business niches were checked against available public descriptions; no follower counts, engagement statistics or unprovided campaign results are published.

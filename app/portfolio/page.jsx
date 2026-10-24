@@ -1,3 +1,4 @@
+import PortfolioNav from "../../components/PortfolioNav";
 import Link from "next/link";
 import ProjectGallery from "../../components/ProjectGallery";
 import { projects, projectPath, niches } from "../../lib/projects.mjs";
@@ -61,6 +62,7 @@ export default function PortfolioPage() {
               manufacturers and online stores to property developers, skincare
               clinics and local services.
             </p>
+            <PortfolioNav active="/portfolio" />
           </div>
         </section>
         <section className="padded-section work-section">

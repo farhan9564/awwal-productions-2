@@ -4083,3 +4083,264 @@ p {
     font-size: 11px;
   }
 }
+
+/* Shared portfolio navigation and Instagram brand projects. */
+.portfolio-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 38px;
+}
+.portfolio-section-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  border: 1px solid #ffffff30;
+  border-radius: 7px;
+  padding: 13px 18px;
+  font-size: 12px;
+  color: #c0c7c5;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+.portfolio-section-nav a.current,
+.portfolio-section-nav a:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: #10140b;
+}
+.social-portfolio-hero {
+  background:
+    radial-gradient(ellipse at 90% 10%, #8750f914, transparent 55%), #0b0e10;
+}
+.social-portfolio-hero h1 {
+  max-width: 1050px;
+}
+.social-portfolio-section {
+  background: #101519;
+}
+.social-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.social-project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid #ffffff20;
+  border-radius: 14px;
+  background: #181f22;
+  padding: 27px;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+.social-project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--social-accent);
+}
+.social-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--social-accent);
+  font: 600 9px var(--display);
+  letter-spacing: 0.14em;
+}
+.social-card-brand {
+  margin: 29px 0 23px;
+}
+.social-brand-initials {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  border: 1px solid var(--social-accent);
+  border-radius: 18px;
+  margin-bottom: 25px;
+  color: var(--social-accent);
+  font: 600 24px var(--display);
+  letter-spacing: -0.07em;
+}
+.social-niche {
+  display: block;
+  color: var(--social-accent);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+  margin-bottom: 11px;
+}
+.social-card-brand h3 {
+  font: 700 clamp(25px, 2.5vw, 35px)/1.08 var(--display);
+  letter-spacing: -0.05em;
+  margin: 0 0 11px;
+}
+.social-handle {
+  color: #aeb9b9;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.social-handle:hover {
+  color: var(--social-accent);
+}
+.social-project-card > p {
+  font-size: 13px;
+  color: #b1bcba;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+.social-content-focus {
+  display: grid;
+  gap: 9px;
+  border-top: 1px solid #ffffff18;
+  padding-top: 19px;
+  margin-top: auto;
+  margin-bottom: 23px;
+}
+.social-content-focus span {
+  color: #879592;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+.social-content-focus strong {
+  color: #dbe2de;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.social-profile-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-top: 1px solid #ffffff20;
+  padding-top: 17px;
+  color: var(--social-accent);
+}
+.social-profile-link > span {
+  font-size: 23px;
+}
+.social-project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.social-project-filters button {
+  border: 1px solid #ffffff30;
+  border-radius: 100px;
+  padding: 11px 16px;
+  background: transparent;
+  color: #bcc7c3;
+  font-size: 12px;
+}
+.social-project-filters button span {
+  margin-left: 12px;
+  opacity: 0.65;
+  font-size: 10px;
+}
+.social-project-filters button.active,
+.social-project-filters button:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: #11170e;
+}
+.social-project-count {
+  color: #9caaa2;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+.social-portfolio-teaser {
+  background: #0b1012;
+  border-top: 1px solid var(--line);
+}
+.social-brand-links {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.social-brand-links a {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 30px 20px;
+  border-right: 1px solid var(--line);
+  gap: 10px;
+}
+.social-brand-links a:last-child {
+  border-right: 0;
+}
+.social-brand-links a > span {
+  font: 600 19px var(--display);
+  letter-spacing: -0.035em;
+}
+.social-brand-links small {
+  font-size: 10px;
+  color: #99a7a4;
+  line-height: 1.7;
+}
+.social-brand-links b {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--social-accent);
+  margin-top: auto;
+  padding-top: 6px;
+}
+.social-brand-links a:hover > span {
+  color: var(--social-accent);
+}
+@media (max-width: 1000px) {
+  .social-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .social-brand-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .social-brand-links a {
+    border-bottom: 1px solid var(--line);
+  }
+}
+@media (max-width: 600px) {
+  .social-project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .social-project-card {
+    padding: 25px;
+  }
+  .social-card-brand h3 {
+    font-size: 32px;
+  }
+  .social-brand-links {
+    grid-template-columns: 1fr 1fr;
+  }
+  .social-brand-links a {
+    padding: 24px 15px;
+  }
+  .portfolio-section-nav {
+    gap: 8px;
+  }
+  .portfolio-section-nav a {
+    font-size: 11px;
+    padding: 12px;
+    gap: 14px;
+  }
+  .social-project-filters button {
+    font-size: 11px;
+    padding: 10px 13px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .social-project-card {
+    transition: none;
+  }
+  .social-project-card:hover {
+    transform: none;
+  }
+}

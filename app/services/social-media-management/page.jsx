@@ -1,3 +1,4 @@
+import SocialPortfolioSection from "../../../components/SocialPortfolioSection";
 import Link from "next/link";
 
 export const metadata = {
@@ -266,6 +267,7 @@ export default function Page() {
             </div>
           </div>
         </section>
+        <SocialPortfolioSection />
         <section className="cta-band">
           <div className="container">
             <div className="cta-inner reveal">

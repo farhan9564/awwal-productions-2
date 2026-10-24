@@ -1,3 +1,4 @@
+import { socialPortfolioPath } from "../lib/social-projects.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile, access } from "node:fs/promises";
@@ -24,7 +25,7 @@ test("every old page permanently redirects to one existing React page", async ()
     assert.ok(!/href="[^"#]*\.html/.test(source), page.path);
     for (const [, href] of source.matchAll(/href="(\/[^"#]*)/g))
       assert.ok(
-        pages.some((p) => p.path === href),
+        pages.some((p) => p.path === href) || href === socialPortfolioPath,
         `Missing ${href}`,
       );
   }

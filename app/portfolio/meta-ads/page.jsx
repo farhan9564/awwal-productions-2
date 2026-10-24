@@ -1,3 +1,4 @@
+import PortfolioNav from "../../../components/PortfolioNav";
 import Link from "next/link";
 import {
   metaCases,
@@ -77,6 +78,7 @@ export default function MetaAdsPortfolio() {
               <span>E-COMMERCE & LEAD GENERATION</span>
               <span>STRATEGY · CREATIVE TESTING · MEASUREMENT</span>
             </div>
+            <PortfolioNav active="/portfolio/meta-ads" />
           </div>
         </section>
         <section id="cases" className="padded-section report-section">

@@ -1,3 +1,4 @@
+import SocialPortfolioTeaser from "../components/SocialPortfolioTeaser";
 import FeaturedMetaCases from "../components/FeaturedMetaCases";
 import Link from "next/link";
 
@@ -840,6 +841,7 @@ export default function Page() {
         </section>
         {"\n"}
         <FeaturedMetaCases />
+        <SocialPortfolioTeaser />
         <section className="padded-section">
           <div className="container process-layout">
             <div className="process-sticky reveal">
